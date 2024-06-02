@@ -5,11 +5,9 @@ import PizzaForm from "./PizzaForm";
 export default function App() {
 
   return(
-    <>
-      <header>App</header>
+    <div id="app">
       <PizzaForm />
       <OrderList />
-      <footer>footer</footer>
-    </>
+    </div>
   )
 }

@@ -1,0 +1,10 @@
+#app {
+  display: flex;
+}
+
+.input-group {
+  border: 1px solid black;
+  padding: 0.5rem;
+
+}
+

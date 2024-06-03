@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setName, setSize, setToppings, resetForm } from "../state/pizzaFormSlice";
-import { addOrder, clearOrders } from "../state/orderListSlice";
+import { addOrder } from "../state/orderListSlice";
 
 export default function PizzaForm() {
   const state = useSelector(st => st.pizzaForm);
@@ -22,15 +22,15 @@ export default function PizzaForm() {
   }
 
   return(
-    <form onSubmit={onSubmit}>
-      <h2>Pizza Form</h2>
+    <form onSubmit={onSubmit} className="container" id="pizza-form">
+      <h2 className="section-header">Pizza Form</h2>
 
       <div className="input-group">
         <div>
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName"><h4>Full Name</h4></label>
           <input 
-            id="fullname"
-            name="fullname"
+            id="fullName"
+            name="fullName"
             placeholder="Type Full Name"
             type="text"
             value={state.fullName}
@@ -43,7 +43,7 @@ export default function PizzaForm() {
 
       <div className="input-group">
         <div>
-          <label htmlFor="size">Size</label>
+          <label htmlFor="size"><h4>Size</h4></label>
           <select
             id="size"
             name="size"
@@ -64,11 +64,11 @@ export default function PizzaForm() {
         <label>
           <input name="Pepperoni" type="checkbox" checked={state['Pepperoni']}
             onChange={() => dispatch(setToppings('Pepperoni'))}/>
-        Pepperoni<br /></label>
+        Pepperoni</label>
         <label>
           <input name="Green Peppers" type="checkbox" checked={state['Green Peppers']}
             onChange={() => dispatch(setToppings('Green Peppers'))}/>
-        Green Peppers<br /></label>
+        Green Peppers</label>
         <label>
           <input name="Pineapple" type="checkbox" checked={state['Pineapple']}
             onChange={() => dispatch(setToppings('Pineapple'))}/>
@@ -82,6 +82,7 @@ export default function PizzaForm() {
             onChange={() => dispatch(setToppings('Ham'))}/>
         Ham<br /></label>
       </div>
+
       <input type="submit" />
     </form>
   )

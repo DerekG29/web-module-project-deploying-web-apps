@@ -54,6 +54,10 @@ input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
+button {
+  text-align: center;
+}
+
 button,
 input[type="submit"] {
   color: #242423;

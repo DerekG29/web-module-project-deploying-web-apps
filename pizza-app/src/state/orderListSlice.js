@@ -4,7 +4,6 @@ const initialState = {
   orders: [
     { fullName: 'Sigourney Weaver', size: 'S', toppings: ['Pepperoni', 'Pineapple'] },
     { fullName: 'Derek Grubbs', size: 'M', toppings: ['Pepperoni', 'Green Peppers', 'Ham'] },
-    { fullName: 'Keilah Baldwin', size: 'L', toppings: [] }
   ]
 };
 
